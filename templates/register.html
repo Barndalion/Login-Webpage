@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <link rel = "stylesheet" href = "{{url_for('static', filename = 'css/style.css')}}">
+    </head>
+    <body>
+        <div class="login">
+            <form action="/register" method="POST">
+                <h1>Register Page</h1>
+                <label>Username</label><br>
+                <input id = "name" type="text" name="name"><br>
+
+                <label>Password</label><br>
+                <input id = "password" type="password" name="password"><br>
+
+                <Button type="submit">Submit</Button>
+                <p>Would you like to <a href="{{url_for('login')}}">Login</a></p>
+            </form>
+        </div>
+    </body>
+</html>
