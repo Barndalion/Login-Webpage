@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Profile - {{ current_user.username }}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white text-center">
+                <h3 class="card-title">Welcome, {{ current_user.username }}!</h3>
+            </div>
+            <div class="card-body">
+                <!-- User Info -->
+                <p><strong style="font-weight: 500;">Username:</strong> {{ current_user.username }}</p>
+                <p><strong style="font-weight: 500;">Email:</strong> {{ current_user.email }}</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
