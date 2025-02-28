@@ -4,7 +4,7 @@ This project is a Flask-based login page that includes user registration, authen
 
 ## Project Structure
 ```
-my_flask_app/
+flask-auth/
 │
 ├── app/
 │   ├── __init__.py
