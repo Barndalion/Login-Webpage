@@ -2,7 +2,6 @@ from AuthBarn import Action
 from flask import Flask, render_template,request,url_for,redirect
 
 instance = Action(_dev_mode = False)
-instance.add_user("Darell Barnes","lionel12$","Admin")
 app = Flask(__name__)
 
 @app.route('/')
@@ -17,9 +16,10 @@ def login():
         password = request.form['password']
 
         log = instance.login(username,password)
+        
 
         if log['state'] == True:
-            return render_template("login.html", message ="Logged successfuly, No User Page Yet")
+            return render_template("users.html", message = instance.view_userinfo("all"))
         else:
             return render_template("login.html", message = 'works')
     return render_template("login.html")
