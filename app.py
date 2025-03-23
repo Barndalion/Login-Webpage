@@ -18,10 +18,10 @@ def login():
 
         log = instance.login(username,password)
 
-        if log == True:
+        if log['state'] == True:
             return render_template("login.html", message ="Logged successfuly, No User Page Yet")
         else:
-            return render_template("login.html", message = log['message'])
+            return render_template("login.html", message = 'works')
     return render_template("login.html")
     
 @app.route('/register', methods = ['GET','POST'])
